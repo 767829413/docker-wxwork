@@ -50,7 +50,7 @@ function pullUpdate () {
 
   echo '🚀 Pulling the latest docker image...'
   echo
-  docker pull zixia/wxwork
+  sudo docker pull zixia/wxwork
   echo
   echo '🚀 Pulling the latest docker image done.'
 }
@@ -72,7 +72,7 @@ function main () {
   # --privileged: enable sound (/dev/snd/)
   # --ipc=host:   enable MIT_SHM (XWindows)
   #
-  docker run \
+  sudo docker run \
     "${DEVICE_ARG[@]}" \
     --name DoWork \
     --rm \
